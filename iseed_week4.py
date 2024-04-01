@@ -1,13 +1,19 @@
-
 #5 
 ss = 'Python' 
 for i in range(0, len(ss)): 
         print(ss[i]+ '%', end ='')  
         
 #11
+import re
 
+def extract_letters(text):
+    cleaned_text = re.sub(r'[^가-힣a-zA-Z]', '', text)
+    return cleaned_text
 
+input_text = "파이썬 ### COOKBOOK $$$ @@@ 열공중 1234"
 
+result = extract_letters(input_text)
+print(result) 
 
 #9 
 inStr, outStr = "python", "" 
@@ -95,21 +101,3 @@ print("매개변수 없이 호출 ==>", myFunc())
 print("매개변수가 1개로 호출 ==>",  myFunc(1))
 print("매개변수가 2개로 호출 ==>",  myFunc(1, 2))
 print("매개변수가 3개로 호출 ==>",  myFunc(1, 2, 3))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
